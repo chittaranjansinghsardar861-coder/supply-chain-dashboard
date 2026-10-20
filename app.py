@@ -6,7 +6,7 @@ st.set_page_config(page_title="Supply Chain Profitability Dashboard", layout="wi
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("DataCoSupplyChainDataset.csv", encoding="ISO-8859-1")
+    df = pd.read_csv("DataCoSupplyChainDataset_small.csv", encoding="ISO-8859-1")
     df['Profit Margin (%)'] = (df['Order Profit Per Order'] / df['Sales']) * 100
     return df
 
